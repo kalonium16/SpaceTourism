@@ -1,0 +1,46 @@
+<section class="text-sepia lg:pt-20 pt-8">
+  <div class="flex flex-col lg:flex-row">
+    <div class="lg:basis-1/12"></div>
+    <div>
+      <h5 class="uppercase lg:pb-12 ml-8 whitespace-nowrap">
+        <span>01 </span>pick your destiantion
+      </h5>
+      <img
+        [src]="destinations[currentDestiantion].images.png"
+        alt=""
+        class="mx-auto my-2 lg:m-0"
+      />
+    </div>
+    <div class="mt-auto lg:ml-auto lg:basis-2/5 md:mx-40 mx-20 lg:mx-0">
+      <div class="flex gap-5 uppercase justify-center">
+        <div
+          *ngFor="let destination of destinations; let i = index"
+          class="nav-text cursor-pointer destination"
+          [ngClass]="{ active: i === currentDestiantion }"
+        >
+          <span (click)="changeDestination(i)">{{ destination.name }}</span>
+        </div>
+      </div>
+      <h2 class="uppercase text-center">
+        {{ destinations[currentDestiantion].name }}
+      </h2>
+      <div class="body-text pb-8 text-center">
+        {{ destinations[currentDestiantion].description }}
+      </div>
+      <hr />
+      <div
+        class="uppercase flex flex-col gap-8 md:flex-row md:gap-36 pt-4 justify-center text-center whitespace-nowrap"
+      >
+        <div>
+          <div class="sb2 pb-2">avg. distance</div>
+          <div class="sb1">{{ destinations[currentDestiantion].distance }}</div>
+        </div>
+        <div>
+          <div class="sb2 pb-2">est. travel time</div>
+          <div class="sb1">{{ destinations[currentDestiantion].travel }}</div>
+        </div>
+      </div>
+    </div>
+    <div class="lg:basis-1/12"></div>
+  </div>
+</section>

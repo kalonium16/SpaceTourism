@@ -1,1 +1,124 @@
 /* You can add global styles to this file, and also import other style files */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --dark: #0b0d17;
+  --light: #d0d6f9;
+  --sepia: #ffffff;
+}
+
+h1,
+h2,
+h3,
+h4,
+.sb1 {
+  font-family: "Bellefair", serif;
+}
+h5,
+.sb2,
+.nav-text,
+.body-text {
+  font-family: "Bellefair", serif;
+}
+
+h1 {
+  font-size: 80px;
+}
+
+h3 {
+  font-size: 24px;
+}
+
+h4 {
+  font-size: 16px;
+}
+
+h5 {
+  font-size: 16px;
+  letter-spacing: 2.7px;
+}
+
+h2 {
+  font-size: 56px;
+}
+
+p {
+  font-size: 15px;
+  line-height: 25px;
+}
+
+.sb1 {
+  font-size: 28px;
+}
+
+.sb2 {
+  font-size: 14px;
+}
+
+.body-text {
+  font-size: 15px;
+  line-height: 25px;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .explore-button {
+    width: 242px;
+    height: 242px;
+  }
+  h1 {
+    font-size: px;
+  }
+
+  h2 {
+    font-size: 80px;
+  }
+
+  h3 {
+    font-size: 40px;
+  }
+
+  h4 {
+    font-size: 24px;
+  }
+
+  h5 {
+    font-size: 20px;
+    letter-spacing: 3.4px;
+  }
+
+  .body-text {
+    font-size: 16px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  h1 {
+    font-size: 150px;
+  }
+  h2 {
+    font-size: 100px;
+  }
+
+  h3 {
+    font-size: 56px;
+  }
+
+  h4 {
+    font-size: 32px;
+  }
+
+  h5 {
+    font-size: 28px;
+    letter-spacing: 4.75px;
+  }
+
+  .nav-text {
+    font-size: 16px;
+  }
+
+  .body-text {
+    font-size: 18px;
+  }
+}

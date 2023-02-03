@@ -1,0 +1,53 @@
+.text-sepia {
+  color: var(--sepia);
+}
+
+.destination:hover {
+  border-bottom: 2px solid var(--light);
+}
+
+.crew-member {
+  height: 40px;
+  width: 40px;
+  line-height: 40px;
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  color: rgba(255, 255, 255, 0.7);
+  border-radius: 50%;
+}
+
+.crew-member:hover {
+  border: 1px solid rgba(255, 255, 255, 0.9);
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.active {
+  background-color: var(--sepia);
+  color: var(--dark);
+}
+
+.active:hover {
+  background-color: var(--sepia);
+  color: var(--dark);
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .crew-member {
+    height: 60px;
+    width: 60px;
+    line-height: 60px;
+    border-radius: 50%;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .crew-member {
+    height: 80px;
+    width: 80px;
+    line-height: 80px;
+    border-radius: 50%;
+  }
+  img {
+    height: 527px;
+    width: auto;
+  }
+}

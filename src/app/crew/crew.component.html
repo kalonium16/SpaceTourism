@@ -1,0 +1,31 @@
+<section class="grid text-sepia lg:text-left lg:grid-cols-2 lg:ml-36">
+  <h5 class="uppercase mt-8 md:ml-12b lg:ml-0 lg:mt-20 ml-8">
+    <span>02 </span>meet your crew
+  </h5>
+  <div class="mx-auto my-4 mg-container md:row-start-3">
+    <img
+      [src]="destinations[currentCrewMember].images.png"
+      alt=""
+      class="responsive mx-auto fix"
+    />
+  </div>
+  <div class="grid md:mt-28 lg:col-start-1 text-center">
+    <div class="flex my-8 lg:mt-36 md:row-start-4 z-10">
+      <div class="mx-auto lg:mx-0 flex">
+        <div
+          *ngFor="let destination of destinations; let i = index"
+          class="cursor-pointer crew-member mx-2"
+          [ngClass]="{ active: i === currentCrewMember }"
+          (click)="changeCrewMemver(i)"
+        ></div>
+      </div>
+    </div>
+    <h4 class="uppercase">{{ destinations[currentCrewMember].role }}</h4>
+    <h3 class="whitespace-nowrap uppercase my-2">
+      {{ destinations[currentCrewMember].name }}
+    </h3>
+    <p class="body-text mx-8 lg:mx-0">
+      {{ destinations[currentCrewMember].bio }}
+    </p>
+  </div>
+</section>

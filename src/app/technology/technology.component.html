@@ -1,0 +1,37 @@
+<section class="text-sepia lg:pt-20 pt-8 lg:ml-44">
+  <h5 class="uppercase lg:pb-12 whitespace-nowrap ml-8">
+    <div class="lg:basis-1/12"></div>
+    <span>03 </span>SPACE LAUNCH <span>101</span>
+  </h5>
+  <div class="flex flex-col text-center lg:flex-row">
+    <img
+      src="{{ technologyImage }}"
+      alt=""
+      class="mx-auto my-8 w-screen lg:order-5 lg:mr-0 lg:ml-auto"
+    />
+    <div class="mx-6 md:mx-40 lg:flex lg:basis-2/5 lg:mx-0 lg:mt-24">
+      <div class="flex gap-5 justify-center">
+        <div class="mx-auto lg:mx-0 flex lg:flex-col gap-2 lg:gap-8">
+          <div
+            *ngFor="let technology of technologys; let i = index"
+            class="cursor-pointer crew-member"
+            [ngClass]="{ active: i === currentTechnology }"
+            (click)="changeDestination(i)"
+          >
+            <h4 (click)="changeDestination(i)">{{ i }}</h4>
+          </div>
+        </div>
+      </div>
+      <div class="lg:ml-20">
+        <div class="body-text mt-8">THE TERMINOLOGY…</div>
+        <h3 class="uppercase text-center mt-2">
+          {{ technologys[currentTechnology].name }}
+        </h3>
+        <div class="body-text pb-8 text-center mt-4">
+          {{ technologys[currentTechnology].description }}
+        </div>
+      </div>
+    </div>
+    <div class="lg:basis-1/12"></div>
+  </div>
+</section>

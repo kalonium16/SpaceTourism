@@ -1,0 +1,134 @@
+main {
+  min-width: 100%;
+  min-height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+ul {
+  background-color: rgb(255, 255, 255, 0.04);
+  backdrop-filter: blur(10px);
+}
+
+.main-ul {
+  display: none;
+}
+li {
+  color: var(--sepia);
+}
+
+main.home {
+  background-image: url("../assets/home/background-home-mobile.jpg");
+  background-attachment: fixed;
+}
+
+main.destination {
+  background-image: url("../assets/destination/background-destination-mobile.jpg");
+}
+
+main.crew {
+  background-image: url("../assets/crew/background-crew-mobile.jpg");
+}
+
+main.tech {
+  background-image: url("../assets/technology/background-technology-mobile.jpg");
+}
+@media screen and (min-width: 1024px) {
+  .main-ul {
+    display: flex;
+  }
+  li {
+    height: 100%;
+    line-height: 96px;
+  }
+  main.home {
+    background-image: url("../assets/home/background-home-desktop.jpg");
+  }
+
+  main.destination {
+    background-image: url("../assets/destination/background-destination-desktop.jpg");
+  }
+
+  main.crew {
+    background-image: url("../assets/crew/background-crew-desktop.jpg");
+  }
+
+  main.tech {
+    background-image: url("../assets/technology/background-technology-desktop.jpg");
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .main-ul {
+    display: flex;
+  }
+  li {
+    height: 100%;
+    line-height: 96px;
+  }
+  span {
+    display: none;
+  }
+  main.home {
+    background-image: url("../assets/home/background-home-tablet.jpg");
+  }
+
+  main.destination {
+    background-image: url("../assets/destination/background-destination-tablet.jpg");
+  }
+
+  main.crew {
+    background-image: url("../assets/crew/background-crew-tablet.jpg");
+  }
+
+  main.tech {
+    background-image: url("../assets/technology/background-technology-tablet.jpg");
+  }
+}
+
+#preloadedImages {
+  width: 0px;
+  height: 0px;
+  display: inline;
+  background-image: url("../assets/home/background-home-tablet.jpg"),
+    url("../assets/destination/background-destination-tablet.jpg"),
+    url("../assets/crew/background-crew-tablet.jpg"),
+    url("../assets/technology/background-technology-tablet.jpg"),
+    url("../assets/home/background-home-desktop.jpg"),
+    url("../assets/destination/background-destination-desktop.jpg"),
+    url("../assets/crew/background-crew-desktop.jpg"),
+    url("../assets/technology/background-technology-desktop.jpg"),
+    url("../assets/home/background-home-mobile.jpg"),
+    url("../assets/destination/background-destination-mobile.jpg"),
+    url("../assets/crew/background-crew-mobile.jpg"),
+    url("../assets/technology/background-technology-tablet.jpg");
+}
+
+img {
+  max-width: none;
+}
+
+.sidepanel {
+  height: 100vh; /* Specify a height */
+  width: 0; /* 0 width - change this with JavaScript */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Stay on top */
+  top: 0;
+  right: 0;
+  background-color: rgb(255, 255, 255, 0.04);
+  backdrop-filter: blur(10px);
+  overflow-x: hidden; /* Disable horizontal scroll */
+  padding-top: 60px; /* Place content 60px from the top */
+  transition: 0.5s; /* 0.5 second transition effect to slide in the sidepanel */
+}
+
+.open {
+  width: 250px;
+}
+
+.active-link {
+  border-bottom: 2px solid #ffffff;
+}
+
+li:hover {
+  border-bottom: 2px solid var(--light);
+}

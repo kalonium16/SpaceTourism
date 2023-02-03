@@ -1,0 +1,33 @@
+h1,
+h5,
+p {
+  color: var(--sepia);
+}
+
+.explore-button {
+  width: 150px;
+  height: 150px;
+  background-color: var(--sepia);
+  transition: all 0.5s ease-out;
+}
+
+.explore-button:hover {
+  box-shadow: 0 0 0 75px rgba(255, 255, 255, 0.2);
+}
+
+.explore-button h3 {
+  color: var(--dark);
+}
+
+@media screen and (min-width: 1024px) {
+  .explore-button {
+    width: 274px;
+    height: 274px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .explore-button {
+    width: 242px;
+    height: 242px;
+  }
+}
