@@ -16,6 +16,5 @@ export class CrewComponent implements OnInit {
 
   changeCrewMemver(index: number) {
     this.currentCrewMember = index;
-    console.log(this.currentCrewMember);
   }
 }

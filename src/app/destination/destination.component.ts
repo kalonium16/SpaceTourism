@@ -15,6 +15,5 @@ export class DestinationComponent implements OnInit {
 
   changeDestination(index: number) {
     this.currentDestiantion = index;
-    console.log(this.currentDestiantion);
   }
 }

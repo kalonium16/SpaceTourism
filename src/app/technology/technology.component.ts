@@ -26,7 +26,6 @@ export class TechnologyComponent implements OnInit {
   changeDestination(index: number) {
     this.currentTechnology = index;
     this.setImage(this.innerWidth);
-    console.log(this.currentTechnology);
   }
 
   setImage(width: number) {
